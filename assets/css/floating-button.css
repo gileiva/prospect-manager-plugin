@@ -41,8 +41,8 @@
 }
 
 .main-button {
-    background-color: #ff2670;
-    color: #fff;
+    /* background-color: #ff2670;
+    color: #fff; */
     border: none;
     border-radius: 50%;
     width: 54px;
@@ -61,11 +61,12 @@
     bottom: 0;
     width: 54px;
     height: 54px;
-    background: #ff2670;
+    background: #000;
     border-radius: 50%;
     z-index: -99;
     pointer-events: none;
     transition: 1.25s all ease .5s;
+    opacity: 90%;
 }
 
 .button-wrapper.clicked {
@@ -84,7 +85,7 @@
 }
 .close-button {
     background: white;
-    color: #ff2670;
+    color: #000;
     /* border: solid 1px black; */
     border-radius: 50%; /* Hace el botón circular */
     width: 40px; /* Ajusta el tamaño total del botón */
@@ -122,7 +123,7 @@
 
 .prospect-form label {
     font-weight: 300;
-    color: #333;
+    /* color: #333; */
 }
 
 .prospect-form input[type="text"],
@@ -144,13 +145,13 @@
 .radio-group label {
     display: block;
     font-weight: 300;
-    color: #333;
+    /* color: #333; */
     margin-top: 8px;
 }
 
 .btn-primary {
-    background-color: #ff2670;
-    color: white;
+    /* background-color: #ff2670;
+    color: white; */
     border: none;
     border-radius: 4px;
     padding: 10px 20px;
@@ -160,14 +161,15 @@
 }
 
 .btn-primary:hover {
-    background-color: #e12360;
+    background-color: #000;
+    color:#f0f0f0;
 }
 
 /* Response Message Styles */
 #form-response {
     font-size: 14px;
     font-weight: 300;
-    color: #333;
+    /* color: #333; */
     text-align: center;
     margin-top: 10px;
 }
