@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Prospect Manager Plugin
  * Description: This plugin allows saving all new prospects in the WordPress administrator to  follow up until the prospect becomes a new client.
- * Version: 0.1
+ * Version: 1.0
  * Author: Gi Leiva
  * Author URI: https://gileiva.ar
  * License: GPL v2
