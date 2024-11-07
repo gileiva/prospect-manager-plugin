@@ -1,0 +1,130 @@
+/* Estilo general del contenedor de campos */
+.prospect-fields-grid {
+    display: grid;
+    gap: 20px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Fondo claro para contraste */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Estilo de las filas */
+.prospect-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Ajustes individuales para cada campo */
+.prospect-field {
+    flex: 1;
+    min-width: 280px; /* Asegura que los campos no se estrechen demasiado */
+}
+
+/* Etiquetas */
+.prospect-field label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333; /* Texto oscuro para legibilidad */
+}
+
+/* Campos de entrada y select */
+.prospect-field input[type="text"],
+.prospect-field select,
+.prospect-field textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Fondo blanco */
+    font-size: 14px;
+    color: #333;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.prospect-field input[type="text"]:focus,
+.prospect-field select:focus,
+.prospect-field textarea:focus {
+    border-color: #0073aa; /* Color de enfoque que sigue la paleta de WordPress */
+}
+
+/* Textareas */
+.prospect-field textarea {
+    resize: vertical;
+}
+
+/* Ajustes de disposición en pantallas grandes */
+@media (min-width: 768px) {
+    .prospect-fields-grid {
+        grid-template-columns: 1fr 1fr; /* Dos columnas para pantallas más grandes */
+    }
+    
+    .prospect-row .prospect-field {
+        flex: none;
+        width: 48%; /* Ajusta el ancho de los campos para alinearse en dos columnas */
+    }
+}
+
+/* Ajustes de diseño para pantallas pequeñas */
+@media (max-width: 767px) {
+    .prospect-fields-grid {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 15px;
+    }
+
+    .prospect-row .prospect-field {
+        width: 100%; /* Campos de ancho completo */
+    }
+}
+
+/* Botones de selección de usuarios */
+.prospect-field select {
+    background-color: #fff;
+    appearance: none; /* Oculta la flecha por defecto */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="%230073aa"><polygon points="0,0 12,0 6,6"></polygon></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+/* Ajustes de formulario adicional */
+.prospect-field input[readonly] {
+    background-color: #e9ecef; /* Fondo claro para campos de solo lectura */
+    color: #6c757d; /* Texto más suave */
+}
+
+.prospect-tracking-section {
+    margin-top: 20px;
+}
+
+#tracking-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+#tracking-messages p {
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#tracking-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+#tracking-messages::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+#tracking-messages::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}

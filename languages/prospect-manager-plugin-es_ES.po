@@ -1,0 +1,347 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Prospect Manager Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-01 20:02+0000\n"
+"PO-Revision-Date: 2024-11-01 20:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: Español\n"
+"Language: es_ES\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.11; wp-6.6.2\n"
+"X-Domain: prospect-manager-plugin"
+
+#: includes/class-notificationmanager.php:38
+#, php-format
+msgid "A new prospect titled \"%s\" has been created. You can view it here: %s"
+msgstr "Se ha creado un nuevo prospecto llamado \"%s\". Puedes verlo aquí: %s"
+
+#: includes/class-prospecttracking.php:32
+msgid "Add Message"
+msgstr "Agregar mensaje"
+
+#: includes/class-prospectcpt.php:30
+msgid "Add New"
+msgstr "Agregar nuevo"
+
+#: includes/class-prospectcpt.php:31
+msgid "Add New Prospect"
+msgstr "Agregar nuevo prospecto"
+
+#: includes/class-prospectcpt.php:90
+msgid "Add New Service"
+msgstr "Agregar nuevo servicio"
+
+#: includes/class-prospectcpt.php:66
+msgid "Add New Status"
+msgstr "Agregar nuevo estado"
+
+#: includes/class-prospectcpt.php:34
+msgid "All Prospects"
+msgstr "Todos los prospectos"
+
+#: includes/class-prospectcpt.php:87
+msgid "All Services"
+msgstr "Todos los servicios"
+
+#: includes/class-prospectcpt.php:63
+msgid "All Statuses"
+msgstr "Todos los estados"
+
+#: includes/class-admin.php:37
+msgid "Bienvenidos al admin"
+msgstr ""
+
+#: includes/class-formhandler.php:72
+msgid "By email"
+msgstr "Por correo electrónico"
+
+#: includes/class-formhandler.php:75
+msgid "By WhatsApp"
+msgstr "Envíame un WhatsApp"
+
+#: includes/class-prospectcpt.php:183
+msgid "Contact Date and Time"
+msgstr "Fecha y hora del contacto"
+
+#: includes/class-prospectcpt.php:180
+msgid "Contact Preference"
+msgstr "Preferencia de contacto"
+
+#: includes/class-prospectcpt.php:182
+msgid "Developer"
+msgstr "Desarrollador"
+
+#: includes/class-prospectcpt.php:32
+msgid "Edit Prospect"
+msgstr "Editar prospecto"
+
+#: includes/class-prospectcpt.php:88
+msgid "Edit Service"
+msgstr "Editar servicio"
+
+#: includes/class-prospectcpt.php:64
+msgid "Edit Status"
+msgstr "Editar estado"
+
+#: includes/class-formhandler.php:59 includes/class-prospectcpt.php:178
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: includes/class-admin.php:66
+msgid "Enable Floating Button"
+msgstr "Habilitar botón flotante"
+
+#: includes/class-admin.php:70
+msgid "Enable reCAPTCHA"
+msgstr "Habilitar reCAPTCHA"
+
+#: includes/class-formhandler.php:121 includes/class-formhandler.php:175
+msgid "Error: reCAPTCHA verification failed. Please try again."
+msgstr "Error: la verificación reCAPTCHA falló. Inténtalo de nuevo."
+
+#: includes/class-formhandler.php:54 includes/class-prospectcpt.php:177
+msgid "Full Name"
+msgstr "Nombre Completo"
+
+#. Author of the plugin
+msgid "Gi Leiva"
+msgstr ""
+
+#: includes/class-formhandler.php:69
+msgid "How do you prefer to be contacted?"
+msgstr "¿Cómo prefieres que nos comuniquemos contigo?"
+
+#. Author URI of the plugin
+msgid "https://gileiva.ar"
+msgstr ""
+
+#: includes/class-formhandler.php:84 includes/class-prospectcpt.php:186
+msgid "Inquiry"
+msgstr "Consulta"
+
+#: includes/class-prospecttracking.php:65
+msgid "Invalid data"
+msgstr "Información inválida"
+
+#: includes/class-prospectcpt.php:184
+msgid "Lead Source"
+msgstr "Fuente del prospecto"
+
+#: includes/class-prospectcpt.php:33
+msgid "New Prospect"
+msgstr "Nuevo prospecto"
+
+#: includes/class-notificationmanager.php:36
+msgid "New Prospect Created"
+msgstr "Nuevo prospecto creado"
+
+#: includes/class-prospectcpt.php:91
+msgid "New Service Name"
+msgstr "Nuevo nombre de servicio"
+
+#: includes/class-prospectcpt.php:67
+msgid "New Status Name"
+msgstr "Nuevo nombre de estado"
+
+#: includes/class-prospecttracking.php:30
+msgid "New Tracking Message"
+msgstr "Nuevo mensaje de seguimiento"
+
+#: includes/class-prospectcpt.php:37
+msgid "No prospects found"
+msgstr "No hay prospectos"
+
+#: includes/class-prospectcpt.php:38
+msgid "No prospects found in Trash"
+msgstr "No hay prospectos en la papelera."
+
+#: includes/class-prospecttracking.php:41
+msgid "No tracking messages yet."
+msgstr "No hay seguimiento aún."
+
+#: includes/class-formhandler.php:104
+msgid "Nonce verification failed."
+msgstr "La verificación falló"
+
+#: includes/class-prospectcpt.php:187
+msgid "Observations"
+msgstr "Observaciones"
+
+#: includes/class-prospectcpt.php:185
+msgid "Priority Level"
+msgstr "Prioridad"
+
+#: includes/class-prospectcpt.php:28
+msgid "Prospect"
+msgstr "Prospecto"
+
+#: includes/class-prospectcpt.php:166
+msgid "Prospect Details"
+msgstr "Detalles del prospecto"
+
+#. Name of the plugin
+msgid "Prospect Manager Plugin"
+msgstr ""
+
+#: includes/class-prospectcpt.php:60 includes/class-prospectcpt.php:68
+#: includes/class-prospectcpt.php:114
+msgid "Prospect Status"
+msgstr "Estado del prospecto"
+
+#: includes/class-prospectcpt.php:167
+msgid "Prospect Tracking"
+msgstr "Seguimiento del prospecto"
+
+#: includes/class-admin.php:15
+msgid "ProspectManager"
+msgstr ""
+
+#: includes/class-admin.php:14
+msgid "ProspectManager Admin"
+msgstr ""
+
+#: includes/class-prospectcpt.php:27 includes/class-prospectcpt.php:29
+msgid "Prospects"
+msgstr "Prospectos"
+
+#: includes/class-admin.php:76
+msgid "reCAPTCHA Secret Key"
+msgstr ""
+
+#: includes/class-formhandler.php:113 includes/class-formhandler.php:167
+msgid "reCAPTCHA secret key is not set."
+msgstr "reCAPTCHA secret key aún no ha sido definida"
+
+#: includes/class-admin.php:73
+msgid "reCAPTCHA Site Key"
+msgstr ""
+
+#: includes/class-prospectcpt.php:181
+msgid "Sales Agent"
+msgstr "Vendedor"
+
+#: includes/class-admin.php:79
+msgid "Save Settings"
+msgstr "Guardar configuración"
+
+#: includes/class-formhandler.php:78
+msgid "Schedule a virtual meeting"
+msgstr "Agendar una reunión virtual"
+
+#: includes/class-prospectcpt.php:36
+msgid "Search Prospects"
+msgstr "Buscar prospectos"
+
+#: includes/class-prospectcpt.php:86
+msgid "Search Services"
+msgstr "Buscar servicios"
+
+#: includes/class-prospectcpt.php:62
+msgid "Search Statuses"
+msgstr "Buscar estados"
+
+#: includes/class-prospectcpt.php:136
+msgid "Select Status"
+msgstr "Seleccionar estados"
+
+#: includes/class-prospectcpt.php:246
+msgid "Select User"
+msgstr "Seleccionar usuario"
+
+#: includes/class-prospectcpt.php:85
+msgid "Service"
+msgstr "Servicio"
+
+#: includes/class-prospectcpt.php:84 includes/class-prospectcpt.php:92
+msgid "Service Type"
+msgstr "Tipo de servicio"
+
+#: includes/class-admin.php:25 includes/class-admin.php:26
+#: includes/class-admin.php:60
+msgid "Settings"
+msgstr "Preferencias"
+
+#: includes/class-admin.php:51
+msgid "Settings saved."
+msgstr "Preferencias guardadas"
+
+#: includes/class-prospectcpt.php:61
+msgid "Status"
+msgstr "Estado"
+
+#: includes/class-formhandler.php:92
+msgid "Submit"
+msgstr "Enviar"
+
+#: includes/class-formhandler.php:145 includes/class-formhandler.php:198
+msgid "Thank you for your inquiry"
+msgstr "Muchas gracias por su consulta"
+
+#: includes/class-formhandler.php:204
+msgid "There was an error submitting your inquiry. Please try again."
+msgstr "Hubo un error al enviar tu consulta. Por favor intenta nuevamente."
+
+#. Description of the plugin
+msgid ""
+"This plugin allows saving all new prospects in the WordPress administrator "
+"to  follow up until the prospect becomes a new client."
+msgstr ""
+"Este complemento permite guardar todos los nuevos prospectos en el "
+"administrador de WordPress para realizar un seguimiento hasta que el "
+"prospecto se convierta en un nuevo cliente."
+
+#: includes/class-prospectcpt.php:89
+msgid "Update Service"
+msgstr "Actualizar servicio"
+
+#: includes/class-prospectcpt.php:65
+msgid "Update Status"
+msgstr "Actualizar estado"
+
+#: includes/class-prospectcpt.php:35
+msgid "View Prospect"
+msgstr "Ver prospecto"
+
+#: includes/class-formhandler.php:146 includes/class-formhandler.php:199
+msgid "We have received your inquiry and will contact you shortly."
+msgstr ""
+"Hemos recibido su consulta y nos pondremos en contacto con usted en breve."
+
+#: includes/class-formhandler.php:64 includes/class-prospectcpt.php:179
+msgid "WhatsApp Number"
+msgstr "Número de WhatsApp"
+
+#: includes/class-notificationmanager.php:49
+msgid "You have been assigned as Developer"
+msgstr "Has sido asignado como desarrollador"
+
+#: includes/class-notificationmanager.php:63
+msgid "You have been assigned as Sales Agent"
+msgstr "Has sido asignado como vendedor "
+
+#: includes/class-notificationmanager.php:51
+#, php-format
+msgid ""
+"You have been assigned as the Developer for the prospect titled \"%s\". View "
+"it here: %s"
+msgstr ""
+"Se le ha asignado como desarrollador para el prospecto llamado \"%s\". Véalo "
+"aquí: %s"
+
+#: includes/class-notificationmanager.php:65
+#, php-format
+msgid ""
+"You have been assigned as the Sales Agent for the prospect titled \"%s\". "
+"View it here: %s"
+msgstr ""
+"Se le ha asignado como agente de ventas para el cliente potencial llamado "
+"\"%s\". Véalo aquí: %s"
+
+#: includes/class-formhandler.php:202
+msgid "Your inquiry has been successfully submitted."
+msgstr "Tu consulta fue enviada exitosamente."
