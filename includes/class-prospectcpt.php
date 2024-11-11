@@ -43,10 +43,12 @@ class ProspectCPT {
 
         $args = [
             'labels'             => $labels,
-            'public'             => true,
-            'has_archive'        => true,
+            'public'             => false,
+            'publicly_queryable' => false,
+            'show_ui'            => true,
+            'has_archive'        => false,
             'supports'           => ['title'],
-            'show_in_rest'       => true,
+            'show_in_rest'       => false,
             'capability_type'    => 'post',
             'menu_icon'          => 'dashicons-businessperson',
         ];

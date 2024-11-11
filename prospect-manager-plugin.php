@@ -44,3 +44,29 @@ function gl_run_prospect_manager() {
     $plugin->register_assets();
 }
 add_action('plugins_loaded', 'gl_run_prospect_manager');
+
+/**
+ * Función de activación del plugin
+ */
+function prospect_manager_activate() {
+    if (is_multisite()) {
+        global $wpdb;
+        $original_blog_id = get_current_blog_id();
+        $blogs = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
+
+        // Iterar sobre cada sitio en la red
+        foreach ($blogs as $blog_id) {
+            switch_to_blog($blog_id);
+            (new \ProspectM\ProspectCPT())->register_prospect_cpt(); // Registrar el CPT en cada sitio
+            restore_current_blog();
+        }
+        switch_to_blog($original_blog_id); // Regresar al sitio original
+    } else {
+        (new \ProspectM\ProspectCPT())->register_prospect_cpt(); // Registrar el CPT en un solo sitio
+    }
+
+    flush_rewrite_rules(); // Limpiar las reglas de reescritura para que los enlaces permanentes funcionen
+}
+
+// Llama a la función de activación al activar el plugin
+register_activation_hook(__FILE__, 'prospect_manager_activate');
