@@ -15,7 +15,7 @@ class FormHandler {
         add_action('wp_enqueue_scripts', [$this, 'enqueue_scripts']);
         add_action('wp_ajax_submit_prospect_form', [$this, 'handle_ajax_submission']);
         add_action('wp_ajax_nopriv_submit_prospect_form', [$this, 'handle_ajax_submission']);
-        add_action('init', [$this, 'handle_form_submission']); 
+        // add_action('init', [$this, 'handle_form_submission']); 
     }
 
     /**
@@ -59,6 +59,10 @@ class FormHandler {
         ?>
         <form id="prospect-form" method="post" action="" class="prospect-form">
             <?php wp_nonce_field('prospect_form_submit', 'prospect_form_nonce'); ?>
+
+            <!-- Honeypot -->
+            <input type="text" id="honeypot_field" name="honeypot_field" style="display:none;" tabindex="-1" autocomplete="off">
+
             <div class="form-group">
                 <label for="full_name"><?php _e('Full Name', 'prospect-manager-plugin'); ?></label>
                 <input type="text" id="full_name" name="full_name" required class="form-control" />
@@ -103,48 +107,59 @@ class FormHandler {
     /**
      * Handles form submission for non-AJAX submissions (regular form post).
      */
-    public function handle_form_submission() {
-        if (isset($_POST['submit_prospect_form'])) {
-            if (!isset($_POST['prospect_form_nonce']) || !wp_verify_nonce($_POST['prospect_form_nonce'], 'prospect_form_submit')) {
-                wp_die(__('Nonce verification failed.', 'prospect-manager-plugin'));
-            }
+    // public function handle_form_submission() {
+    //     if (isset($_POST['submit_prospect_form'])) {
+    //         if (!isset($_POST['prospect_form_nonce']) || !wp_verify_nonce($_POST['prospect_form_nonce'], 'prospect_form_submit')) {
+    //             wp_die(__('Nonce verification failed.', 'prospect-manager-plugin'));
+    //         }
 
-            $post_data = [
-                'post_title'   => sanitize_text_field($_POST['full_name']),
-                'post_type'    => 'prospect',
-                'post_status'  => 'publish',
-                'meta_input'   => [
-                    'full_name'          => sanitize_text_field($_POST['full_name']),
-                    'email'              => sanitize_email($_POST['email']),
-                    'whatsapp_number'    => sanitize_text_field($_POST['whatsapp_number']),
-                    'contact_preference' => sanitize_text_field($_POST['contact_preference']),
-                    'inquiry'            => sanitize_textarea_field($_POST['inquiry']),
-                ],
-            ];
+    //         // Honeypot
+    //         if (!empty($_POST['honeypot_field'])) {
+    //             wp_die(__('Spam detected. Form submission blocked.', 'prospect-manager-plugin'));
+    //         }
 
-            $post_id = wp_insert_post($post_data);
+    //         $post_data = [
+    //             'post_title'   => sanitize_text_field($_POST['full_name']),
+    //             'post_type'    => 'prospect',
+    //             'post_status'  => 'publish',
+    //             'meta_input'   => [
+    //                 'full_name'          => sanitize_text_field($_POST['full_name']),
+    //                 'email'              => sanitize_email($_POST['email']),
+    //                 'whatsapp_number'    => sanitize_text_field($_POST['whatsapp_number']),
+    //                 'contact_preference' => sanitize_text_field($_POST['contact_preference']),
+    //                 'inquiry'            => sanitize_textarea_field($_POST['inquiry']),
+    //             ],
+    //         ];
 
-            if (!is_wp_error($post_id)) {
-                wp_mail(
-                    sanitize_email($_POST['email']),
-                    __('Thank you for your inquiry', 'prospect-manager-plugin'),
-                    __('We have received your inquiry and will contact you shortly.', 'prospect-manager-plugin')
-                );
+    //         $post_id = wp_insert_post($post_data);
 
-                wp_send_json_success(__('Your inquiry has been successfully submitted.', 'prospect-manager-plugin'));
-            } else {
-                wp_send_json_error(__('There was an error submitting your inquiry. Please try again.', 'prospect-manager-plugin'));
-            }
+    //         if (!is_wp_error($post_id)) {
+    //             wp_mail(
+    //                 sanitize_email($_POST['email']),
+    //                 __('Thank you for your inquiry', 'prospect-manager-plugin'),
+    //                 __('We have received your inquiry and will contact you shortly.', 'prospect-manager-plugin')
+    //             );
 
-            wp_die();
-        }
-    }
+    //             wp_send_json_success(__('Your inquiry has been successfully submitted.', 'prospect-manager-plugin'));
+    //         } else {
+    //             wp_send_json_error(__('There was an error submitting your inquiry. Please try again.', 'prospect-manager-plugin'));
+    //         }
+
+    //         wp_die();
+    //     }
+    // }
 
     /**
      * Handles the AJAX form submission and saves the data to the CPT.
      */
     public function handle_ajax_submission() {
         check_ajax_referer('prospect_form_submit', 'nonce');
+
+        // Honeypot
+        if (!empty($_POST['honeypot_field'])) {
+            wp_send_json_error(__('Spam detected. Form submission blocked.', 'prospect-manager-plugin'));
+            return;
+        }
 
         $user_ip = $_SERVER['REMOTE_ADDR'];
         $attempts = get_transient('form_attempts_' . $user_ip) ?: 0;

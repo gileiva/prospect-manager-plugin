@@ -49,7 +49,7 @@ class GiHandler {
      */
     public function initialize_form_handler() {
         $form_handler = new FormHandler();
-        add_action('init', [$form_handler, 'handle_form_submission']);
+        //add_action('init', [$form_handler, 'handle_form_submission']);
     }
 
     /**

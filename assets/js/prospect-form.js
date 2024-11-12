@@ -1,5 +1,12 @@
 jQuery(document).ready(function($) {
     $('#prospect-form').on('submit', function(e) {
+
+        // Honeypot
+        if ($('#honeypot_field').val() !== '') {
+            alert('Spam detected. Form submission blocked.');
+            return false;
+        }
+
         e.preventDefault();
 
         console.log('Formulario enviado, preparando datos...');
